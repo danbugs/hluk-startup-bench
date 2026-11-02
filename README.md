@@ -1,17 +1,17 @@
 # hluk-startup-bench
 
-A small, reproducible harness for the startup-time comparison in the blog post
-**"Run Linux applications in hypervisor-isolated micro-VMs with Hyperlight."**
+A small, reproducible harness that compares warm-snapshot startup time in
+[hyperlight-unikraft](https://github.com/hyperlight-dev/hyperlight-unikraft)
+(`hluk`) against running the same program natively.
 
 It answers one question: for a given program, how long does it take to get a
-result from a warm [hyperlight-unikraft](https://github.com/hyperlight-dev/hyperlight-unikraft)
-(`hluk`) snapshot versus running the same program natively on the host — with
-process start included on both sides, which is what the post reports.
+result from a warm `hluk` snapshot versus running the same program natively on
+the host — with process start included on both sides.
 
-This is deliberately simpler than the full
+It is deliberately simpler than the full
 [hyperlight-bench](https://github.com/hyperlight-dev/hyperlight-bench) HTTP
-suite: it measures exactly the handful of startup numbers the post shows, and
-nothing else, so the table is easy to re-run and audit.
+suite: it measures just a handful of startup numbers, so the table is easy to
+re-run and audit.
 
 ## What it measures
 
